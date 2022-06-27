@@ -59,10 +59,8 @@ export function Subscribe(){
                             className="px-6 bg-black border border-white h-14" 
                                 type="e-mail" placeholder="Digite seu e-mail"
                                 onChange={event => setEmail(event.target.value)}/>
-                        <button
-                            disabled={loading} 
-                            type="submit" 
-                            className="py-4 mt-4 text-sm font-bold uppercase bg-green-500 rounded disabled:opacity-50">
+                        <button type="submit" 
+                            className="py-4 mt-4 text-sm font-bold uppercase bg-green-500 rounded">
                             Garantir minha vaga
                         </button>
                     </form>

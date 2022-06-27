@@ -2,7 +2,6 @@ import { CheckCircleIcon, LockClosedIcon } from '@heroicons/react/outline'
 import { format, isPast } from "date-fns";
 import ptBR from 'date-fns/locale/pt-BR';
 import { Link, useParams } from "react-router-dom";
-import classNames from 'classnames'
 
 interface LessonProps {
   title: string;
@@ -19,15 +18,13 @@ export function Lesson(props: LessonProps) {
     locale: ptBR,
   })
 
-  const isActiveLesson = slug === props.slug;
   return (
     <Link to={`/event/lesson/${props.slug}`} className="group">
       <span className="text-gray-300">
         {availableDateFormatted}
       </span>
 
-      <div className={classNames('p-4 mt-2 border border-gray-500 rounded group-hover:border-green-500',
-                      {'bg-green-500' : isActiveLesson, })}>
+      <div className="p-4 mt-2 border border-gray-500 rounded group-hover:border-green-500">
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span className="flex items-center gap-2 text-sm font-medium text-blue-500">
@@ -46,9 +43,7 @@ export function Lesson(props: LessonProps) {
           </span>
         </header>
 
-        <strong className={classNames('block mt-5 text-gray-200', {
-          'text-purple-500': isActiveLesson
-        })}>
+        <strong className="block mt-5 text-gray-200">
           {props.title}
         </strong>
       </div>

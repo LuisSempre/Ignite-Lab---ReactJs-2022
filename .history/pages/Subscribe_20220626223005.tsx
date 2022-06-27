@@ -62,7 +62,7 @@ export function Subscribe(){
                         <button
                             disabled={loading} 
                             type="submit" 
-                            className="py-4 mt-4 text-sm font-bold uppercase bg-green-500 rounded disabled:opacity-50">
+                            className="py-4 mt-4 text-sm font-bold uppercase bg-green-500 rounded disabled:opacity-10">
                             Garantir minha vaga
                         </button>
                     </form>
